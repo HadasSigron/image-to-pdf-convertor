@@ -9,8 +9,8 @@ if os.path.isdir(filepath):
     with open(f"output/{pdfname}.pdf", "wb") as f:
         imgs = []
         for fname in os.listdir(filepath):
-            if not fname.endswith(".jpg"):
-                continue
+            if not fname.lower().endswith(".jpg"):
+               continue
             path = os.path.join(filepath, fname)
             if os.path.isdir(path):
                 continue
